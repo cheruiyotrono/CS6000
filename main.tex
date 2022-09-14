@@ -1,0 +1,55 @@
+\documentclass[a4paper]{article}
+
+% Required package
+\usepackage{tikz}
+\usetikzlibrary{mindmap} % Mindmap drawing library  %used by mindmap.tex
+
+\usepackage[
+backend=biber,
+style=alphabetic,
+]{biblatex}
+\addbibresource{refs.bib} %Imports bibliography file
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\graphicspath{ {./images/} }
+\usepackage{multicol}
+\usepackage{setspace}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+
+\usepackage{booktabs}
+\usepackage{tabu}
+\usepackage[T1]{fontenc}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+%\usepackage{apacite}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{A Survey on Advanced Machine Learning (ML) techniques to Protect Smart Grid Against Cybersecurity Breaches }
+\author{Raymond \textbf {Rono} Cheruiyot \\ Department of Computer Science}
+\date{13 September 2022}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\section{Mind Map}
+
+\input{mindmap}
+\input{paper}
+
+\nocite{Foroutan_undated-ig}
+\nocite{Karimipour2017-tj}
+\nocite{Rahman2013-pu}
+\nocite{Zhang2019-eu}
+
+%\bibliography{refs}
+\printbibliography
+\end{document}

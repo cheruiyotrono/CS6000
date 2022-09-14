@@ -1,0 +1,38 @@
+\begin{tikzpicture}[
+    mindmap,
+    concept color = red!30, 
+    every node/.style = {concept}, 
+    grow cyclic,
+    level 1/.append style = {
+        level distance = 4.5cm,
+        sibling angle = 120
+    },
+    level 2/.append style = {
+        level distance = 3cm,
+        sibling angle = 45}
+]
+
+\node {Smart Grid Security Architecture}
+        child {node [concept color = blue!30] {Availability}
+            child {node {Network Availability e.g. DOS Attacks}}
+            child {node {Compromise communication equipment}}
+            child {node {Physical security Breach}}
+            child {node {Compromise communication equipment}}
+            child {node {IP based attacks}}
+        }
+        child [concept color = green!30] {node {Confidentiality}
+            child {node {Eavesdrop and traffic analysis}}
+            child {node {Modbus security issue e.g Broadcast message spoofing}}
+            child {node {Customer security e.g Smart meter breach}}
+        }
+        child {node [concept color = magenta!30] {Integrity}
+                child [concept color = magenta!50!black] {node {Malware}}
+                child [concept color = magenta!60!black] {node {Injecting false information (Replay Attack)}}
+                child [concept color = magenta!70!black] {node {Access through database links}}
+                child [concept color = magenta!50!black] {node {Compromise Smart Intelligent devices}}
+                child [concept color = magenta!60!black] {node {Injecting false information (Replay Attack)}}
+                child [concept color = magenta!70!black] {node {Outdated Equipment}}
+        };
+
+     %\child {Cybersecurity Threats Against the Smart Grid}
+\end{tikzpicture}
